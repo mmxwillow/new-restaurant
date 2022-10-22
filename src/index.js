@@ -1,15 +1,3 @@
-/*
-        <header>
-            <ul>
-                <li>Home</li>
-                <li>Menu</li>
-                <li>Contact</li>
-            </ul>
-            <span id="menu" class="material-symbols-outlined">
-                menu
-                </span>
-        </header>
-*/
 import printHome from './home.js'
 import printMenu from './menu.js';
 
@@ -23,6 +11,8 @@ const displayHeader = (() => {
     links.forEach((link) => {
         const li = document.createElement('li');
         li.innerHTML = link;
+        li.id = link.toLowerCase() + 'Btn';
+        li.addEventListener('click', clearDisplay);
         list.appendChild(li);
     })
 
@@ -39,6 +29,15 @@ const displayHeader = (() => {
 
     document.querySelector('#content').appendChild(header);
 })();
+
+const displayPage = (() => {
+    document.querySelector('#homeBtn').addEventListener('click', printHome);
+    document.querySelector('#menuBtn').addEventListener('click', printMenu);
+})();
+
+function clearDisplay(){
+    document.querySelector('main').remove();
+}
 
 //printHome();
 printMenu();
