@@ -38,6 +38,7 @@ const displayPage = (() => {
 })();
 
 function clearDisplay(){
+    if(document.querySelector('.visible')) document.querySelector('.visible').classList.remove('visible');
     document.querySelector('main').remove();
 }
 
