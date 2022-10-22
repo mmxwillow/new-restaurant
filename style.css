@@ -43,7 +43,7 @@ li:hover {
     cursor: pointer;
 }
 
-main {
+#home {
     display: grid;
     grid-template-columns: 3fr 1fr 1fr;
     gap: 3em;
@@ -94,12 +94,12 @@ a {
 }
 
 @media (max-width:1000px) {
-    main {
+    #home {
         grid-template-columns: 1fr 1fr;
         margin: 1em 3em;
     }
 
-    main :first-child {
+    #home :first-child {
         grid-column: span 2;
     }
 
@@ -126,12 +126,12 @@ a {
 }
 
 @media (max-width:480px) {
-    main{
+    #home{
         margin: 3em;
         grid-template-columns: 1fr;
     }
 
-    main :first-child {
+    #home :first-child {
         grid-column: span 1;
     }
 
