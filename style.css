@@ -62,7 +62,7 @@ li:hover {
     gap: 1em;
 }
 
-.title {
+.title, .price {
     font-weight: 600;
     font-size: 30px;
 }
@@ -93,6 +93,33 @@ a {
     text-underline-offset: 2px;
 }
 
+/*Menu Page*/
+
+#menu-page{
+    color:white;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(381px,1fr));
+    gap:10em 5em;
+    margin:5em;
+    place-content: center;
+}
+
+#menu-page>div{
+    display:grid;
+    grid-template-columns:1fr max-content;
+    grid-template-rows:max-content 1fr;
+}
+
+#menu-page .section{
+    grid-column: span 2;
+    border-top:1px solid white;
+    padding-top: 1em;
+}
+
+.price{
+    justify-self:end;
+}
+
 @media (max-width:1000px) {
     #home {
         grid-template-columns: 1fr 1fr;
@@ -107,7 +134,7 @@ a {
         height: 30vh;
     }
 
-    .title {
+    .title, .price, header {
         font-size: 24px;
     }
 
@@ -116,12 +143,13 @@ a {
         -webkit-line-clamp: 7;
     }
 
-    header {
-        font-size: 24px;
-    }
-
     a{
         font-size:18px;
+    }
+
+    #menu-page{
+        gap:3em;
+        grid-template-columns:1fr;
     }
 }
 
@@ -139,7 +167,7 @@ a {
         height:min-content;
     }
 
-    .title {
+    .title, .price {
         font-size: 20px;
     }
 
