@@ -1,0 +1,180 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: url(wallpaperflare.com_wallpaper.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#content {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Quicksand', sans-serif;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    overflow:scroll;
+
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 3em;
+    margin: 0 9em;
+    align-items: center;
+    color: white;
+    line-height: 2em;
+}
+
+.card {
+    border-left: 1px solid white;
+    padding: 2em;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.section {
+    font-size: 22px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 13;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+a {
+    color: white;
+    font-size: 22px;
+}
+
+#menu{
+    display:none;
+}
+
+#link {
+    font-weight: 100;
+    font-size: 18px;
+    text-decoration: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+@media (max-width:1000px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        margin: 1em 3em;
+    }
+
+    main :first-child {
+        grid-column: span 2;
+    }
+
+    .card {
+        height: 30vh;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .section {
+        font-size: 18px;
+        -webkit-line-clamp: 7;
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    a{
+        font-size:18px;
+    }
+}
+
+@media (max-width:480px) {
+    main{
+        margin: 3em;
+        grid-template-columns: 1fr;
+    }
+
+    main :first-child {
+        grid-column: span 1;
+    }
+
+    .card{
+        height:min-content;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .section {
+        font-size: 16px;
+    }
+
+    header {
+        justify-content:flex-end;
+        font-size: 20px;
+    }
+
+    ul{
+        position: fixed;
+        height:100%;
+        width: 100%;
+        background-color:black;
+        flex-direction: column;
+        top:0;
+        right:-100vw;
+        gap:1em;
+        transition:0.5s;
+    }
+    .visible{
+        right:0;
+    }
+    li{
+        padding: 0 2em;
+    }
+    li:first-of-type{
+        padding-top:3em;
+    }
+    #menu{
+        display:block;
+        z-index: 1;
+        padding-right: 1em;
+    }
+}
