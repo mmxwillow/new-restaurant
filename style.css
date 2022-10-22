@@ -9,13 +9,11 @@ body {
 }
 
 #content {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
     font-family: 'Quicksand', sans-serif;
     display: grid;
     grid-template-rows: min-content 1fr;
-    overflow:scroll;
-
 }
 
 header {
@@ -83,6 +81,7 @@ a {
 
 #menu{
     display:none;
+    cursor: pointer;
 }
 
 #link {
@@ -126,7 +125,7 @@ a {
     color:white;
     display:grid;
     grid-template-columns:2fr 1fr;
-    margin:5em 10vw;
+    margin:12em 10vw;
     gap:12vw;
 }
 
