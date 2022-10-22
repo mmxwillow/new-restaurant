@@ -11,6 +11,7 @@
         </header>
 */
 import printHome from './home.js'
+import printMenu from './menu.js';
 
 const displayHeader = (() => {
     const header = document.createElement('header');
@@ -39,5 +40,6 @@ const displayHeader = (() => {
     document.querySelector('#content').appendChild(header);
 })();
 
-printHome();
+//printHome();
+printMenu();
 
