@@ -1,5 +1,6 @@
 import printHome from './home.js'
 import printMenu from './menu.js';
+import printContact from './contact.js';
 
 const displayHeader = (() => {
     const header = document.createElement('header');
@@ -33,12 +34,12 @@ const displayHeader = (() => {
 const displayPage = (() => {
     document.querySelector('#homeBtn').addEventListener('click', printHome);
     document.querySelector('#menuBtn').addEventListener('click', printMenu);
+    document.querySelector('#contactBtn').addEventListener('click', printContact);
 })();
 
 function clearDisplay(){
     document.querySelector('main').remove();
 }
 
-//printHome();
-printMenu();
+printHome();
 

@@ -120,6 +120,56 @@ a {
     justify-self:end;
 }
 
+/*Contact Page*/
+
+#contact{
+    color:white;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    margin:5em 10vw;
+    gap:12vw;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+#contact .title{
+    border-bottom: 1px solid white;
+}
+
+label, #contact .section{
+    margin-top:1em;
+    margin-bottom:0.5em;
+}
+
+input, textarea{
+    font-size:16px; 
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border:transparent;
+    font-family:inherit;
+}
+
+textarea{
+    padding: 1em;
+}
+
+button{
+    margin: 1em 0;
+    width:25%;
+    padding:0.5em;
+    font-size:18px;
+    font-family:inherit;
+    font-weight: bold;
+    color:white;
+    background-color:rgb(62, 151, 62);
+    border:transparent;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
 @media (max-width:1000px) {
     #home {
         grid-template-columns: 1fr 1fr;
@@ -151,6 +201,16 @@ a {
         gap:3em;
         grid-template-columns:1fr;
     }
+
+    #contact{
+        grid-template-columns:1fr;
+        grid-template-rows: max-content;
+        gap:5em;
+    }
+
+    #contact>div{
+        grid-row: 1;
+    }
 }
 
 @media (max-width:480px) {
@@ -173,6 +233,10 @@ a {
 
     .section {
         font-size: 16px;
+    }
+
+    input, textarea, button{
+        font-size:14px;
     }
 
     header {
